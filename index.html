@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZAIN WARRIOR GAMER</title>
+    <link rel="stylesheet" href="home-styles.css">
+</head>
+
+<body>
+    <div class="stars"></div>
+
+    <header class="header">
+        <h1>Zain Apks Hub</h1>
+        <p>Download Latest Modded Apks By ZAIN WARRIOR</p>
+        <div class="search-container">
+            <input type="text" placeholder="Search premium APKs..." class="search-input">
+        </div>
+    </header>
+
+    <main class="main-content">
+        <h2 class="section-title">Download Apks</h2>
+
+        <div class="apks-grid" id="apksGrid">
+
+        </div>
+
+        <div class="pagination">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Copyright © 2025 ZAIN Apks Hub | All Rights Reserved</p>
+    </footer>
+
+    <!-- App Details Modal -->
+    <div class="modal-overlay" id="detailsModal">
+        <div class="details-modal-container">
+            <button class="close-btn" id="detailsCloseBtn">&times;</button>
+
+            <div class="app-icon-large" id="modalAppIcon">M</div>
+            <h2 id="modalAppName">Movie Hub</h2>
+            <p class="modal-status" id="modalAppStatus">Premium Unlocked</p>
+
+            <div class="details-grid">
+                <div class="detail-box">
+                    <p class="detail-label">Downloads</p>
+                    <p class="detail-value" id="modalDownloads">1K+</p>
+                </div>
+                <div class="detail-box">
+                    <p class="detail-label">Size</p>
+                    <p class="detail-value" id="modalSize">15MB</p>
+                </div>
+                <div class="detail-box">
+                    <p class="detail-label">Version</p>
+                    <p class="detail-value" id="modalVersion">1.0</p>
+                </div>
+                <div class="detail-box">
+                    <p class="detail-label">Rating</p>
+                    <p class="detail-value" id="modalRating">4.8⭐</p>
+                </div>
+            </div>
+
+            <button onclick="" class="download-mod-btn" id="downloadModBtn">
+                <span class="icon">⬇️</span>
+                DOWNLOAD MOD APK
+            </button>
+        </div>
+    </div>
+
+    <!-- Unlock Tasks Modal -->
+    <div class="modal-overlay" id="unlockModal" style="display: none;">
+        <div class="unlock-modal-container">
+            <button class="close-btn" id="unlockCloseBtn">&times;</button>
+
+            <div class="modal-header">
+                <h1>Unlock Premium Download</h1>
+                <p>Follow our channels to access premium mods:</p>
+            </div>
+
+            <div class="modal-body">
+                <button class="social-btn telegram" id="telegramBtn" data-task="telegram">
+                    <span class="icon">📱</span>
+                    Join Telegram Channel
+                </button>
+
+                <button class="social-btn youtube" id="youtubeBtn" data-task="youtube">
+                    <span class="icon">▶️</span>
+                    Subscribe on YouTube
+                </button>
+
+                <button class="social-btn telegram-second" id="telegram2Btn" data-task="telegram2">
+                    <span class="icon">📱</span>
+                    Join Second Channel
+                </button>
+
+                <button class="social-btn instagram" id="instagramBtn" data-task="instagram">
+                    <span class="icon">📷</span>
+                    Follow on Instagram
+                </button>
+            </div>
+
+            <p class="info-text">After following all channels, the download will be unlocked.</p>
+
+            <button class="unlock-btn" id="unlockDownloadBtn" disabled>
+                <span class="icon">👍</span>
+                UNLOCK DOWNLOAD
+            </button>
+        </div>
+    </div>
+
+    <script src="home-script.js"></script>
+</body>
+
+</html>
