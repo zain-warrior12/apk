@@ -125,10 +125,193 @@
 
     .tab-content {
         display: none;
+        position: relative;
     }
 
     .tab-content.active {
         display: block;
+    }
+
+    /* ============================================ */
+    /* TAB SWITCHING ANIMATIONS */
+    /* ============================================ */
+
+    .tab-content.tab-exit-left {
+        animation: slideOutLeft 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+    }
+
+    .tab-content.tab-exit-right {
+        animation: slideOutRight 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+    }
+
+    .tab-content.tab-enter-left {
+        animation: slideInLeft 0.75s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    .tab-content.tab-enter-right {
+        animation: slideInRight 0.75s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    @keyframes slideOutLeft {
+        0% {
+            transform: translateX(0) scale(1) rotateY(0deg);
+            opacity: 1;
+        }
+
+        100% {
+            transform: translateX(-120%) scale(0.8) rotateY(-45deg);
+            opacity: 0;
+        }
+    }
+
+    @keyframes slideOutRight {
+        0% {
+            transform: translateX(0) scale(1) rotateY(0deg);
+            opacity: 1;
+        }
+
+        100% {
+            transform: translateX(120%) scale(0.8) rotateY(45deg);
+            opacity: 0;
+        }
+    }
+
+    @keyframes slideInLeft {
+        0% {
+            transform: translateX(-120%) scale(0.8) rotateY(-45deg);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateX(0) scale(1) rotateY(0deg);
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideInRight {
+        0% {
+            transform: translateX(120%) scale(0.8) rotateY(45deg);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateX(0) scale(1) rotateY(0deg);
+            opacity: 1;
+        }
+    }
+
+    /* Animate section title during tab switch */
+    .tab-content.tab-enter-left .section-title,
+    .tab-content.tab-enter-right .section-title {
+        animation: titleBounceIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.3s both;
+    }
+
+    @keyframes titleBounceIn {
+        0% {
+            transform: translateY(-50px) scale(0.5);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+        }
+    }
+
+    /* Animate cards during tab switch */
+    .tab-content.tab-enter-left .apk-card,
+    .tab-content.tab-enter-right .apk-card {
+        animation: cardFadeInUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+    }
+
+    .tab-content.tab-enter-left .apk-card:nth-child(1),
+    .tab-content.tab-enter-right .apk-card:nth-child(1) {
+        animation-delay: 0.4s;
+    }
+
+    .tab-content.tab-enter-left .apk-card:nth-child(2),
+    .tab-content.tab-enter-right .apk-card:nth-child(2) {
+        animation-delay: 0.45s;
+    }
+
+    .tab-content.tab-enter-left .apk-card:nth-child(3),
+    .tab-content.tab-enter-right .apk-card:nth-child(3) {
+        animation-delay: 0.5s;
+    }
+
+    .tab-content.tab-enter-left .apk-card:nth-child(4),
+    .tab-content.tab-enter-right .apk-card:nth-child(4) {
+        animation-delay: 0.55s;
+    }
+
+    .tab-content.tab-enter-left .apk-card:nth-child(5),
+    .tab-content.tab-enter-right .apk-card:nth-child(5) {
+        animation-delay: 0.6s;
+    }
+
+    .tab-content.tab-enter-left .apk-card:nth-child(6),
+    .tab-content.tab-enter-right .apk-card:nth-child(6) {
+        animation-delay: 0.65s;
+    }
+
+    .tab-content.tab-enter-left .apk-card:nth-child(7),
+    .tab-content.tab-enter-right .apk-card:nth-child(7) {
+        animation-delay: 0.7s;
+    }
+
+    .tab-content.tab-enter-left .apk-card:nth-child(8),
+    .tab-content.tab-enter-right .apk-card:nth-child(8) {
+        animation-delay: 0.75s;
+    }
+
+    .tab-content.tab-enter-left .apk-card:nth-child(9),
+    .tab-content.tab-enter-right .apk-card:nth-child(9) {
+        animation-delay: 0.8s;
+    }
+
+    .tab-content.tab-enter-left .apk-card:nth-child(10),
+    .tab-content.tab-enter-right .apk-card:nth-child(10) {
+        animation-delay: 0.85s;
+    }
+
+    .tab-content.tab-enter-left .apk-card:nth-child(11),
+    .tab-content.tab-enter-right .apk-card:nth-child(11) {
+        animation-delay: 0.9s;
+    }
+
+    .tab-content.tab-enter-left .apk-card:nth-child(12),
+    .tab-content.tab-enter-right .apk-card:nth-child(12) {
+        animation-delay: 0.95s;
+    }
+
+    @keyframes cardFadeInUp {
+        0% {
+            transform: translateY(80px) rotateX(-90deg);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateY(0) rotateX(0deg);
+            opacity: 1;
+        }
+    }
+
+    /* Animate pagination during tab switch */
+    .tab-content.tab-enter-left .pagination,
+    .tab-content.tab-enter-right .pagination {
+        animation: paginationZoomIn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 1s both;
+    }
+
+    @keyframes paginationZoomIn {
+        0% {
+            transform: scale(0) rotate(-180deg);
+            opacity: 0;
+        }
+
+        100% {
+            transform: scale(1) rotate(0deg);
+            opacity: 1;
+        }
     }
 
     .search-container {
@@ -1375,18 +1558,61 @@
         // END ENTRANCE ANIMATION CONTROL
         // ============================================
 
-        // Tab Switching Functionality
+        // Tab Switching Functionality with Animations
+        let isTabSwitching = false;
+        let currentTabIndex = 0;
+        const tabOrder = ['mobile', 'pc', 'movies'];
+
         document.querySelectorAll('.tab-btn').forEach(btn => {
             btn.addEventListener('click', () => {
-                const tabName = btn.dataset.tab;
+                if (isTabSwitching) return; // Prevent multiple clicks during animation
 
-                // Update active tab button
+                const tabName = btn.dataset.tab;
+                const newTabIndex = tabOrder.indexOf(tabName);
+                const currentTab = document.querySelector('.tab-content.active');
+                const newTab = document.getElementById(`${tabName}-content`);
+
+                // If clicking the same tab, do nothing
+                if (currentTab === newTab) return;
+
+                isTabSwitching = true;
+
+                // Determine animation direction
+                const isMovingRight = newTabIndex > currentTabIndex;
+
+                // Update active tab button with smooth transition
                 document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
 
-                // Update active tab content
-                document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
-                document.getElementById(`${tabName}-content`).classList.add('active');
+                // Exit animation for current tab
+                if (isMovingRight) {
+                    currentTab.classList.add('tab-exit-left');
+                } else {
+                    currentTab.classList.add('tab-exit-right');
+                }
+
+                // Wait for exit animation to complete (750ms)
+                setTimeout(() => {
+                    // Hide current tab
+                    currentTab.classList.remove('active', 'tab-exit-left', 'tab-exit-right');
+
+                    // Show new tab with enter animation
+                    newTab.classList.add('active');
+                    if (isMovingRight) {
+                        newTab.classList.add('tab-enter-right');
+                    } else {
+                        newTab.classList.add('tab-enter-left');
+                    }
+
+                    // Update current tab index
+                    currentTabIndex = newTabIndex;
+
+                    // Wait for enter animation to complete (1500ms total)
+                    setTimeout(() => {
+                        newTab.classList.remove('tab-enter-left', 'tab-enter-right');
+                        isTabSwitching = false;
+                    }, 1500);
+                }, 750);
             });
         });
 
