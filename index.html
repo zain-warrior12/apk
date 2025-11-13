@@ -317,6 +317,8 @@
     .search-container {
         max-width: 500px;
         margin: 0 auto;
+        position: relative;
+        z-index: 100;
     }
 
     .search-input {
@@ -463,6 +465,311 @@
 
     .emoji {
         background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+    }
+
+    /* Hidden Apps Styles */
+    .admin-panel {
+        background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
+    }
+
+    .vip-tools {
+        background: linear-gradient(135deg, #ffd700 0%, #ffaa00 100%);
+    }
+
+    .dev-edition {
+        background: linear-gradient(135deg, #00ff00 0%, #00cc00 100%);
+    }
+
+    .secret-pc {
+        background: linear-gradient(135deg, #ff00ff 0%, #cc00cc 100%);
+    }
+
+    .exclusive {
+        background: linear-gradient(135deg, #00ffff 0%, #00cccc 100%);
+    }
+
+    /* Game Parts Styles */
+    .game-gta {
+        background: linear-gradient(135deg, #ff6b00 0%, #ff4500 100%);
+    }
+
+    .game-pubg {
+        background: linear-gradient(135deg, #ffaa00 0%, #ff8800 100%);
+    }
+
+    .game-cod {
+        background: linear-gradient(135deg, #00ff88 0%, #00cc66 100%);
+    }
+
+    /* Game Parts Modal */
+    .game-parts-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        z-index: 10000;
+        animation: fadeIn 0.3s ease;
+    }
+
+    .game-parts-modal.active {
+        display: flex;
+    }
+
+    .game-parts-container {
+        background: linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 100%);
+        border-radius: 30px;
+        padding: 40px 30px;
+        max-width: 600px;
+        width: 100%;
+        max-height: 80vh;
+        overflow-y: auto;
+        position: relative;
+        box-shadow: 0 20px 60px rgba(255, 0, 0, 0.5);
+        border: 2px solid #ff0000;
+        animation: slideInScale 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    @keyframes slideInScale {
+        from {
+            transform: scale(0.8) translateY(50px);
+            opacity: 0;
+        }
+
+        to {
+            transform: scale(1) translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .game-parts-container::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .game-parts-container::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 10px;
+    }
+
+    .game-parts-container::-webkit-scrollbar-thumb {
+        background: #ff0000;
+        border-radius: 10px;
+    }
+
+    .game-parts-header {
+        text-align: center;
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        border-bottom: 2px solid rgba(255, 0, 0, 0.3);
+    }
+
+    .game-parts-header h2 {
+        color: #ff0000;
+        font-size: 28px;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .game-parts-header p {
+        color: #aaa;
+        font-size: 14px;
+    }
+
+    .game-parts-list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    .game-part-item {
+        background: rgba(255, 0, 0, 0.1);
+        border: 1px solid rgba(255, 0, 0, 0.3);
+        border-radius: 15px;
+        padding: 15px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: all 0.3s;
+        animation: partSlideIn 0.4s ease backwards;
+    }
+
+    .game-part-item:nth-child(1) {
+        animation-delay: 0.1s;
+    }
+
+    .game-part-item:nth-child(2) {
+        animation-delay: 0.15s;
+    }
+
+    .game-part-item:nth-child(3) {
+        animation-delay: 0.2s;
+    }
+
+    .game-part-item:nth-child(4) {
+        animation-delay: 0.25s;
+    }
+
+    .game-part-item:nth-child(5) {
+        animation-delay: 0.3s;
+    }
+
+    .game-part-item:nth-child(6) {
+        animation-delay: 0.35s;
+    }
+
+    .game-part-item:nth-child(7) {
+        animation-delay: 0.4s;
+    }
+
+    .game-part-item:nth-child(8) {
+        animation-delay: 0.45s;
+    }
+
+    .game-part-item:nth-child(9) {
+        animation-delay: 0.5s;
+    }
+
+    .game-part-item:nth-child(10) {
+        animation-delay: 0.55s;
+    }
+
+    .game-part-item:nth-child(n+11) {
+        animation-delay: 0.6s;
+    }
+
+    @keyframes partSlideIn {
+        from {
+            transform: translateX(-50px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    .game-part-item:hover {
+        background: rgba(255, 0, 0, 0.2);
+        border-color: rgba(255, 0, 0, 0.6);
+        transform: translateX(5px);
+    }
+
+    .game-part-info {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .game-part-number {
+        background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
+        color: #fff;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        font-weight: 700;
+        box-shadow: 0 4px 15px rgba(255, 0, 0, 0.4);
+    }
+
+    .game-part-details {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .game-part-title {
+        color: #fff;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .game-part-size {
+        color: #888;
+        font-size: 13px;
+    }
+
+    .game-part-download-btn {
+        background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
+        border: none;
+        color: #fff;
+        padding: 12px 25px;
+        border-radius: 25px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+    }
+
+    .game-part-download-btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 20px rgba(255, 0, 0, 0.5);
+    }
+
+    .game-part-download-btn:active {
+        transform: scale(0.98);
+    }
+
+    .game-parts-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: rgba(255, 0, 0, 0.2);
+        border: 2px solid rgba(255, 0, 0, 0.5);
+        color: #ff0000;
+        font-size: 28px;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .game-parts-close:hover {
+        background: rgba(255, 0, 0, 0.4);
+        transform: rotate(90deg);
+    }
+
+    @media (max-width: 768px) {
+        .game-parts-container {
+            padding: 30px 20px;
+            max-height: 85vh;
+        }
+
+        .game-parts-header h2 {
+            font-size: 22px;
+        }
+
+        .game-part-item {
+            padding: 12px 15px;
+        }
+
+        .game-part-number {
+            width: 40px;
+            height: 40px;
+            font-size: 16px;
+        }
+
+        .game-part-download-btn {
+            padding: 10px 20px;
+            font-size: 13px;
+        }
     }
 
     .apk-card h3 {
@@ -1336,6 +1643,491 @@
             font-size: 9px;
         }
     }
+
+    /* ============================================ */
+    /* AI CHATBOT STYLES */
+    /* ============================================ */
+
+    .ai-chat-button {
+        position: fixed;
+        bottom: 90px;
+        right: 30px;
+        width: 65px;
+        height: 65px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 9999;
+        box-shadow: 0 8px 30px rgba(102, 126, 234, 0.4);
+        transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        animation: aiPulse 2s ease-in-out infinite;
+    }
+
+    .ai-chat-button:hover {
+        transform: scale(1.1) rotate(10deg);
+        box-shadow: 0 12px 40px rgba(102, 126, 234, 0.6);
+    }
+
+    .ai-chat-button .ai-icon {
+        font-size: 32px;
+        animation: aiIconFloat 3s ease-in-out infinite;
+    }
+
+    @keyframes aiPulse {
+
+        0%,
+        100% {
+            box-shadow: 0 8px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        50% {
+            box-shadow: 0 8px 30px rgba(102, 126, 234, 0.8), 0 0 40px rgba(102, 126, 234, 0.4);
+        }
+    }
+
+    @keyframes aiIconFloat {
+
+        0%,
+        100% {
+            transform: translateY(0px);
+        }
+
+        50% {
+            transform: translateY(-5px);
+        }
+    }
+
+    .ai-chat-container {
+        position: fixed;
+        bottom: 170px;
+        right: 30px;
+        width: 380px;
+        height: 550px;
+        background: linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 100%);
+        border-radius: 25px;
+        border: 2px solid rgba(102, 126, 234, 0.3);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        display: none;
+        flex-direction: column;
+        z-index: 9999;
+        overflow: hidden;
+        animation: chatSlideIn 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .ai-chat-container.active {
+        display: flex;
+    }
+
+    @keyframes chatSlideIn {
+        from {
+            transform: translateY(50px) scale(0.8);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+        }
+    }
+
+    .ai-chat-header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .ai-chat-header-left {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .ai-avatar {
+        width: 45px;
+        height: 45px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        animation: avatarGlow 2s ease-in-out infinite;
+    }
+
+    @keyframes avatarGlow {
+
+        0%,
+        100% {
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+
+        50% {
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+        }
+    }
+
+    .ai-chat-title {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ai-chat-title h3 {
+        color: #fff;
+        font-size: 16px;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .ai-chat-title p {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 12px;
+        margin: 2px 0 0 0;
+    }
+
+    .ai-chat-close {
+        background: rgba(255, 255, 255, 0.1);
+        border: none;
+        color: #fff;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 20px;
+        transition: all 0.3s;
+    }
+
+    .ai-chat-close:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: rotate(90deg);
+    }
+
+    .ai-chat-messages {
+        flex: 1;
+        padding: 20px;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .ai-chat-messages::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .ai-chat-messages::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    .ai-chat-messages::-webkit-scrollbar-thumb {
+        background: rgba(102, 126, 234, 0.5);
+        border-radius: 3px;
+    }
+
+    .ai-message {
+        display: flex;
+        gap: 10px;
+        animation: messageSlideIn 0.4s ease-out;
+    }
+
+    @keyframes messageSlideIn {
+        from {
+            transform: translateY(20px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .ai-message.user {
+        flex-direction: row-reverse;
+    }
+
+    .ai-message-avatar {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        flex-shrink: 0;
+    }
+
+    .ai-message.ai .ai-message-avatar {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+
+    .ai-message.user .ai-message-avatar {
+        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    }
+
+    .ai-message-content {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 12px 16px;
+        border-radius: 15px;
+        max-width: 70%;
+        color: #fff;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .ai-message.user .ai-message-content {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+
+    .ai-typing {
+        display: flex;
+        gap: 5px;
+        padding: 10px;
+    }
+
+    .ai-typing span {
+        width: 8px;
+        height: 8px;
+        background: #667eea;
+        border-radius: 50%;
+        animation: typingDot 1.4s infinite;
+    }
+
+    .ai-typing span:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+
+    .ai-typing span:nth-child(3) {
+        animation-delay: 0.4s;
+    }
+
+    @keyframes typingDot {
+
+        0%,
+        60%,
+        100% {
+            transform: translateY(0);
+        }
+
+        30% {
+            transform: translateY(-10px);
+        }
+    }
+
+    .ai-quick-actions {
+        padding: 15px 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .ai-quick-btn {
+        background: rgba(102, 126, 234, 0.2);
+        border: 1px solid rgba(102, 126, 234, 0.3);
+        color: #fff;
+        padding: 8px 15px;
+        border-radius: 20px;
+        font-size: 12px;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .ai-quick-btn:hover {
+        background: rgba(102, 126, 234, 0.4);
+        transform: translateY(-2px);
+    }
+
+    .ai-chat-input-container {
+        padding: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        display: flex;
+        gap: 10px;
+    }
+
+    .ai-chat-input {
+        flex: 1;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 25px;
+        padding: 12px 20px;
+        color: #fff;
+        font-size: 14px;
+        outline: none;
+        transition: all 0.3s;
+    }
+
+    .ai-chat-input:focus {
+        background: rgba(255, 255, 255, 0.08);
+        border-color: rgba(102, 126, 234, 0.5);
+    }
+
+    .ai-chat-send {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border: none;
+        color: #fff;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 20px;
+        transition: all 0.3s;
+    }
+
+    .ai-chat-send:hover {
+        transform: scale(1.1) rotate(15deg);
+        box-shadow: 0 5px 20px rgba(102, 126, 234, 0.5);
+    }
+
+    .ai-chat-send:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+
+    /* AI Smart Search Suggestions */
+    .ai-search-suggestions {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 100%);
+        border: 2px solid rgba(102, 126, 234, 0.5);
+        border-radius: 15px;
+        margin-top: 10px;
+        padding: 15px;
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        z-index: 1000;
+        box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1);
+        animation: suggestionsSlideDown 0.3s ease-out;
+        max-height: 400px;
+        overflow-y: auto;
+    }
+
+    .ai-search-suggestions.active {
+        display: flex !important;
+    }
+
+    .ai-search-suggestions::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .ai-search-suggestions::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 3px;
+    }
+
+    .ai-search-suggestions::-webkit-scrollbar-thumb {
+        background: rgba(102, 126, 234, 0.5);
+        border-radius: 3px;
+    }
+
+    @keyframes suggestionsSlideDown {
+        from {
+            transform: translateY(-10px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .ai-suggestion-item {
+        padding: 12px 15px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.3s;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .ai-suggestion-item:hover {
+        background: rgba(102, 126, 234, 0.2);
+        transform: translateX(5px);
+    }
+
+    .ai-suggestion-icon {
+        font-size: 18px;
+    }
+
+    .ai-suggestion-text {
+        color: #fff;
+        font-size: 14px;
+    }
+
+    /* AI Recommendation Badge */
+    .ai-recommended {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: #fff;
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 11px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        animation: recommendPulse 2s ease-in-out infinite;
+        z-index: 10;
+    }
+
+    @keyframes recommendPulse {
+
+        0%,
+        100% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.05);
+        }
+    }
+
+    /* Entrance animation for AI button */
+    body.loading .ai-chat-button {
+        transform: scale(0) rotate(-180deg);
+        opacity: 0;
+        animation: aiButtonSlideIn 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) 4.5s forwards,
+            aiPulse 2s ease-in-out 5.5s infinite;
+    }
+
+    @keyframes aiButtonSlideIn {
+        to {
+            transform: scale(1) rotate(0deg);
+            opacity: 1;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .ai-chat-container {
+            width: calc(100% - 40px);
+            height: 500px;
+            right: 20px;
+            bottom: 150px;
+        }
+
+        .ai-chat-button {
+            bottom: 80px;
+            right: 20px;
+            width: 55px;
+            height: 55px;
+        }
+
+        .ai-chat-button .ai-icon {
+            font-size: 28px;
+        }
+    }
 </style>
 </head>
 
@@ -1353,6 +2145,46 @@
         </div>
     </div>
 
+    <!-- AI Chat Button -->
+    <div class="ai-chat-button" id="aiChatButton">
+        <div class="ai-icon" style="font-size: 20px; font-weight: 700; letter-spacing: 1px;">AI</div>
+    </div>
+
+    <!-- AI Chat Container -->
+    <div class="ai-chat-container" id="aiChatContainer">
+        <div class="ai-chat-header">
+            <div class="ai-chat-header-left">
+                <div class="ai-avatar" style="font-size: 18px; font-weight: 700;">AI</div>
+                <div class="ai-chat-title">
+                    <h3>AI Assistant</h3>
+                    <p>Online • Ready to help</p>
+                </div>
+            </div>
+            <button class="ai-chat-close" id="aiChatClose">&times;</button>
+        </div>
+
+        <div class="ai-chat-messages" id="aiChatMessages">
+            <div class="ai-message ai">
+                <div class="ai-message-avatar" style="font-size: 16px; font-weight: 700;">AI</div>
+                <div class="ai-message-content">
+                    Hi! I'm your AI assistant. I can help you find the perfect APK, answer questions, and provide
+                    recommendations. How can I assist you today?
+                </div>
+            </div>
+        </div>
+
+        <div class="ai-quick-actions">
+            <button class="ai-quick-btn" data-action="recommend">🎯 Recommend Apps</button>
+            <button class="ai-quick-btn" data-action="popular">🔥 Popular Apps</button>
+            <button class="ai-quick-btn" data-action="help">❓ Help</button>
+        </div>
+
+        <div class="ai-chat-input-container">
+            <input type="text" class="ai-chat-input" id="aiChatInput" placeholder="Ask me anything...">
+            <button class="ai-chat-send" id="aiChatSend">➤</button>
+        </div>
+    </div>
+
     <header class="header">
         <h1>Zain Apks Hub</h1>
         <p>Download Latest Modded Apks By ZAIN WARRIOR</p>
@@ -1365,7 +2197,8 @@
         </div>
 
         <div class="search-container">
-            <input type="text" placeholder="Search premium APKs..." class="search-input">
+            <input type="text" placeholder="Search premium APKs..." class="search-input" id="mainSearchInput">
+            <div class="ai-search-suggestions" id="aiSearchSuggestions"></div>
         </div>
     </header>
 
@@ -1480,6 +2313,22 @@
             <button class="lightbox-close" id="lightboxClose">&times;</button>
             <img src="" alt="" class="lightbox-image" id="lightboxImage">
             <div class="lightbox-title" id="lightboxTitle"></div>
+        </div>
+    </div>
+
+    <!-- Game Parts Modal (Admin Mode Only) -->
+    <div class="game-parts-modal" id="gamePartsModal">
+        <div class="game-parts-container">
+            <button class="game-parts-close" id="gamePartsClose">&times;</button>
+
+            <div class="game-parts-header">
+                <h2 id="gamePartsTitle">🎮 GAME PARTS</h2>
+                <p id="gamePartsSubtitle">Download all parts to install the game</p>
+            </div>
+
+            <div class="game-parts-list" id="gamePartsList">
+                <!-- Parts will be dynamically added here -->
+            </div>
         </div>
     </div>
 
@@ -1732,6 +2581,617 @@
         // END WATERMARK HANDLER
         // ============================================
 
+        // ============================================
+        // AI CHATBOT FUNCTIONALITY
+        // ============================================
+
+        const aiChatButton = document.getElementById('aiChatButton');
+        const aiChatContainer = document.getElementById('aiChatContainer');
+        const aiChatClose = document.getElementById('aiChatClose');
+        const aiChatMessages = document.getElementById('aiChatMessages');
+        const aiChatInput = document.getElementById('aiChatInput');
+        const aiChatSend = document.getElementById('aiChatSend');
+
+        // Toggle chat
+        aiChatButton.addEventListener('click', () => {
+            aiChatContainer.classList.add('active');
+        });
+
+        aiChatClose.addEventListener('click', () => {
+            aiChatContainer.classList.remove('active');
+        });
+
+        // AI Response Database
+        const aiResponses = {
+            greetings: [
+                "Hello! How can I help you find the perfect APK today?",
+                "Hi there! I'm here to assist you with any questions about our apps.",
+                "Hey! Looking for something specific? I can help you find it!"
+            ],
+            recommend: [
+                "Based on popular downloads, I recommend checking out Movie Hub, YouTube Premium, and Instagram Mod. They're highly rated by our users! 🌟",
+                "For entertainment, try Movie Hub and YouTube Premium. For productivity, check out our modded Google Play Store! 📱",
+                "Top picks for you: Movie Hub (streaming), PhonePe Mod (payments), and YouTube Premium (ad-free videos)! 🎯"
+            ],
+            popular: [
+                "Our most popular apps right now are:\n1. Movie Hub 🎬\n2. YouTube Premium ▶️\n3. Instagram Mod 📷\n4. Google Play Store 🏪\n5. PhonePe Mod 💰",
+                "Trending now: Movie Hub with 10K+ downloads, YouTube Premium, and Instagram Mod are getting lots of love! 🔥"
+            ],
+            help: [
+                "I can help you:\n• Find specific apps 🔍\n• Get recommendations 🎯\n• Learn about app features 📱\n• Check download requirements 📊\n\nJust ask me anything!",
+                "Need help? I can:\n✓ Recommend apps based on your needs\n✓ Explain app features\n✓ Guide you through downloads\n✓ Answer any questions!\n\nWhat would you like to know?"
+            ],
+            features: [
+                "All our APKs come with:\n✓ Premium features unlocked\n✓ No ads\n✓ Regular updates\n✓ Safe & tested\n✓ Free downloads",
+                "Our mods include premium unlocks, ad removal, and enhanced features. All apps are tested for safety! 🛡️"
+            ],
+            download: [
+                "To download:\n1. Click on any app card\n2. View app details\n3. Follow our social channels\n4. Download unlocked!\n\nIt's quick and easy! 📥",
+                "Downloads are simple! Just click an app, complete the quick social tasks, and your download unlocks instantly! ⚡"
+            ],
+            default: [
+                "I'm not sure about that, but I can help you find apps, give recommendations, or answer questions about downloads. What would you like to know?",
+                "Hmm, I didn't quite understand that. Try asking about app recommendations, popular apps, or how to download! 🤔",
+                "Let me help you better! You can ask me about:\n• App recommendations\n• Popular downloads\n• How to download\n• App features"
+            ]
+        };
+
+        // AI Intelligence - Keyword matching
+        function getAIResponse(userMessage) {
+            const msg = userMessage.toLowerCase();
+
+            // Creator question - highest priority
+            if (msg.match(/who created you|who made you|who built you|who developed you|who is your creator|who programmed you|who designed you|your creator|your maker|your developer/)) {
+                return "I was created by Zain Warrior, the legend! 🏆⚡ He's an amazing developer who built this entire platform to help people access premium apps. You can check out his YouTube channel by clicking the watermark at the bottom left! 🎮👑";
+            }
+
+            if (msg.match(/hello|hi|hey|greetings/)) {
+                return aiResponses.greetings[Math.floor(Math.random() * aiResponses.greetings.length)];
+            }
+            if (msg.match(/recommend|suggest|best|top|should i/)) {
+                return aiResponses.recommend[Math.floor(Math.random() * aiResponses.recommend.length)];
+            }
+            if (msg.match(/popular|trending|most downloaded|famous/)) {
+                return aiResponses.popular[Math.floor(Math.random() * aiResponses.popular.length)];
+            }
+            if (msg.match(/help|how|guide|tutorial/)) {
+                return aiResponses.help[Math.floor(Math.random() * aiResponses.help.length)];
+            }
+            if (msg.match(/feature|premium|unlock|mod/)) {
+                return aiResponses.features[Math.floor(Math.random() * aiResponses.features.length)];
+            }
+            if (msg.match(/download|install|get|how to/)) {
+                return aiResponses.download[Math.floor(Math.random() * aiResponses.download.length)];
+            }
+            if (msg.match(/movie|video|stream/)) {
+                return "For movies and streaming, I highly recommend Movie Hub! It has a huge library of content with premium features unlocked. 🎬";
+            }
+            if (msg.match(/youtube|video|watch/)) {
+                return "YouTube Premium Mod is perfect for ad-free video watching with background play and downloads! ▶️";
+            }
+            if (msg.match(/instagram|social|photo/)) {
+                return "Instagram Mod gives you extra features like story downloads, no ads, and enhanced privacy! 📷";
+            }
+            if (msg.match(/game|gaming|play/)) {
+                return "Check out our gaming section! We have modded games with unlimited resources and premium features unlocked! 🎮";
+            }
+            if (msg.match(/safe|secure|virus|trust/)) {
+                return "All our APKs are thoroughly tested and scanned for safety. We only provide trusted, secure mods! 🛡️";
+            }
+            if (msg.match(/zain|warrior|gamer|owner|admin/)) {
+                return "Zain Warrior Gamer is the legendary creator of this platform! 🌟 He's passionate about providing quality modded apps to everyone. Subscribe to his YouTube channel for updates and tutorials! 🎬";
+            }
+
+            return aiResponses.default[Math.floor(Math.random() * aiResponses.default.length)];
+        }
+
+        // Add message to chat
+        function addMessage(content, isUser = false) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `ai-message ${isUser ? 'user' : 'ai'}`;
+            messageDiv.innerHTML = `
+                <div class="ai-message-avatar" style="font-size: 14px; font-weight: 700;">${isUser ? '👤' : 'AI'}</div>
+                <div class="ai-message-content">${content}</div>
+            `;
+            aiChatMessages.appendChild(messageDiv);
+            aiChatMessages.scrollTop = aiChatMessages.scrollHeight;
+        }
+
+        // Show typing indicator
+        function showTyping() {
+            const typingDiv = document.createElement('div');
+            typingDiv.className = 'ai-message ai';
+            typingDiv.id = 'typingIndicator';
+            typingDiv.innerHTML = `
+                <div class="ai-message-avatar" style="font-size: 14px; font-weight: 700;">AI</div>
+                <div class="ai-message-content">
+                    <div class="ai-typing">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            `;
+            aiChatMessages.appendChild(typingDiv);
+            aiChatMessages.scrollTop = aiChatMessages.scrollHeight;
+        }
+
+        function removeTyping() {
+            const typing = document.getElementById('typingIndicator');
+            if (typing) typing.remove();
+        }
+
+        // Send message
+        function sendMessage() {
+            const message = aiChatInput.value.trim();
+            if (!message) return;
+
+            // Check for slash commands
+            if (message.startsWith('/')) {
+                handleSlashCommand(message);
+                aiChatInput.value = '';
+                return;
+            }
+
+            // Add user message
+            addMessage(message, true);
+            aiChatInput.value = '';
+
+            // Show typing
+            showTyping();
+
+            // Simulate AI thinking time
+            setTimeout(() => {
+                removeTyping();
+                const response = getAIResponse(message);
+                addMessage(response);
+            }, 1000 + Math.random() * 1000);
+        }
+
+        // Handle slash commands
+        function handleSlashCommand(command) {
+            const parts = command.toLowerCase().split(' ');
+            const cmd = parts[0];
+            const args = parts.slice(1).join(' ');
+
+            addMessage(command, true);
+
+            switch (cmd) {
+                case '/refresh':
+                    addMessage('🔄 Refreshing the page...', false);
+                    setTimeout(() => {
+                        location.reload();
+                    }, 1000);
+                    break;
+
+                case '/hidden':
+                    if (args === HIDDEN_PASSWORD) {
+                        hiddenModeActive = true;
+                        addMessage('🔓 Access Granted! Hidden apps unlocked. Switching to hidden mode...', false);
+                        setTimeout(() => {
+                            showHiddenApps();
+                        }, 1500);
+                    } else if (args === '') {
+                        addMessage('🔒 Please provide the password: /hidden [password]', false);
+                    } else {
+                        addMessage('❌ Access Denied! Incorrect password.', false);
+                    }
+                    break;
+
+                case '/normal':
+                    hiddenModeActive = false;
+                    addMessage('👁️ Switching back to normal mode...', false);
+                    setTimeout(() => {
+                        showNormalApps();
+                    }, 1000);
+                    break;
+
+                case '/clear':
+                    aiChatMessages.innerHTML = `
+                        <div class="ai-message ai">
+                            <div class="ai-message-avatar" style="font-size: 14px; font-weight: 700;">AI</div>
+                            <div class="ai-message-content">
+                                Chat cleared! How can I help you?
+                            </div>
+                        </div>
+                    `;
+                    break;
+
+                case '/help':
+                    addMessage(`📋 Available Commands:
+                    
+/refresh - Refresh the page
+/hidden [password] - Access hidden apps
+/normal - Return to normal mode
+/clear - Clear chat history
+/help - Show this help message
+/about - About this AI
+/commands - List all commands`, false);
+                    break;
+
+                case '/about':
+                    addMessage('I am an AI assistant created by Zain Warrior, the legend! I can help you find apps, answer questions, and execute special commands. Type /help to see all available commands.', false);
+                    break;
+
+                case '/commands':
+                    addMessage(`⚡ Command List:
+                    
+🔄 /refresh - Reload page
+🔒 /hidden [password] - Secret mode
+👁️ /normal - Normal mode
+🗑️ /clear - Clear chat
+❓ /help - Help menu
+ℹ️ /about - About AI
+📋 /commands - This list`, false);
+                    break;
+
+                default:
+                    addMessage(`❌ Unknown command: ${cmd}
+                    
+Type /help to see available commands.`, false);
+                    break;
+            }
+        }
+
+        // Show hidden apps
+        function showHiddenApps() {
+            // Switch to mobile tab
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelector('[data-tab="mobile"]').classList.add('active');
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            document.getElementById('mobile-content').classList.add('active');
+
+            // Render hidden apps
+            const apksGrid = document.getElementById('apksGrid');
+            apksGrid.innerHTML = '<h2 style="grid-column: 1/-1; text-align: center; color: #ff0000; font-size: 24px; margin: 20px 0;">🔒 HIDDEN APPS - ADMIN MODE 🔒</h2>';
+
+            hiddenAppsData.forEach((app, index) => {
+                const card = document.createElement('div');
+                card.className = 'apk-card';
+                card.style.border = '2px solid #ff0000';
+                card.style.boxShadow = '0 0 20px rgba(255, 0, 0, 0.3)';
+                card.innerHTML = `
+                    <div class="apk-icon ${app.iconClass}">
+                        <img src="${app.iconImg}" alt="${app.name}" onerror="this.style.display='none'">
+                    </div>
+                    <h3>${app.name}</h3>
+                    <p class="status">${app.status}</p>
+                    <div class="stats">
+                        <span>📥 ${app.downloads}</span>
+                        <span>📦 ${app.size}</span>
+                    </div>
+                    <button class="view-btn" data-index="${index}" data-hidden="true">View Details</button>
+                `;
+                apksGrid.appendChild(card);
+            });
+
+            // Add games with parts section
+            const gamesHeader = document.createElement('h2');
+            gamesHeader.style.cssText = 'grid-column: 1/-1; text-align: center; color: #ff6600; font-size: 24px; margin: 40px 0 20px 0;';
+            gamesHeader.textContent = '🎮 MULTI-PART GAMES - ADMIN MODE 🎮';
+            apksGrid.appendChild(gamesHeader);
+
+            gamesWithParts.forEach((game, index) => {
+                const card = document.createElement('div');
+                card.className = 'apk-card';
+                card.style.border = '2px solid #ff6600';
+                card.style.boxShadow = '0 0 20px rgba(255, 102, 0, 0.3)';
+                card.innerHTML = `
+                    <div class="apk-icon ${game.iconClass}">
+                        <img src="${game.iconImg}" alt="${game.name}" onerror="this.style.display='none'">
+                    </div>
+                    <h3>${game.name}</h3>
+                    <p class="status">${game.status}</p>
+                    <div class="stats">
+                        <span>📥 ${game.parts.length} Parts</span>
+                        <span>📦 ${game.size}</span>
+                    </div>
+                    <button class="view-btn" onclick="showGameParts(${index})" style="background: linear-gradient(135deg, #ff6600 0%, #ff4400 100%);">View Parts</button>
+                `;
+                apksGrid.appendChild(card);
+            });
+
+            // Update PC grid
+            const pcGrid = document.getElementById('pcGrid');
+            pcGrid.innerHTML = '<h2 style="grid-column: 1/-1; text-align: center; color: #ff0000; font-size: 24px; margin: 20px 0;">🔒 HIDDEN PC SOFTWARE 🔒</h2>';
+
+            hiddenPCData.forEach((app, index) => {
+                const card = document.createElement('div');
+                card.className = 'apk-card';
+                card.style.border = '2px solid #ff0000';
+                card.innerHTML = `
+                    <div class="apk-icon ${app.iconClass}">
+                        <img src="${app.iconImg}" alt="${app.name}" onerror="this.style.display='none'">
+                    </div>
+                    <h3>${app.name}</h3>
+                    <p class="status">${app.status}</p>
+                    <div class="stats">
+                        <span>📥 ${app.downloads}</span>
+                        <span>📦 ${app.size}</span>
+                    </div>
+                    <button class="view-btn" onclick="showPCDetails(${index}, true)">View Details</button>
+                `;
+                pcGrid.appendChild(card);
+            });
+
+            // Update Movies grid
+            const moviesGrid = document.getElementById('moviesGrid');
+            moviesGrid.innerHTML = '<h2 style="grid-column: 1/-1; text-align: center; color: #ff0000; font-size: 24px; margin: 20px 0;">🔒 HIDDEN MOVIES 🔒</h2>';
+
+            hiddenMoviesData.forEach((app, index) => {
+                const card = document.createElement('div');
+                card.className = 'apk-card';
+                card.style.border = '2px solid #ff0000';
+                card.innerHTML = `
+                    <div class="apk-icon ${app.iconClass}">
+                        <img src="${app.iconImg}" alt="${app.name}" onerror="this.style.display='none'">
+                    </div>
+                    <h3>${app.name}</h3>
+                    <p class="status">${app.status}</p>
+                    <div class="stats">
+                        <span>📥 ${app.downloads}</span>
+                        <span>📦 ${app.size}</span>
+                    </div>
+                    <button class="view-btn" onclick="showMovieDetails(${index}, true)">View Details</button>
+                `;
+                moviesGrid.appendChild(card);
+            });
+
+            addMessage('✅ Hidden apps are now visible! Use /normal to return to regular mode.', false);
+        }
+
+        // Show normal apps
+        function showNormalApps() {
+            renderApps();
+            renderPCSoftware();
+            renderMovies();
+            addMessage('✅ Returned to normal mode.', false);
+        }
+
+        // ============================================
+        // GAME PARTS MODAL FUNCTIONS
+        // ============================================
+
+        const gamePartsModal = document.getElementById('gamePartsModal');
+        const gamePartsClose = document.getElementById('gamePartsClose');
+        const gamePartsList = document.getElementById('gamePartsList');
+        const gamePartsTitle = document.getElementById('gamePartsTitle');
+        const gamePartsSubtitle = document.getElementById('gamePartsSubtitle');
+
+        // Show game parts modal
+        function showGameParts(gameIndex) {
+            const game = gamesWithParts[gameIndex];
+            showGamePartsFromApp(game);
+        }
+
+        // Generic function to show parts modal from any app (works for games and PC software)
+        function showGamePartsFromApp(appData) {
+            // Update modal title with appropriate icon
+            const icon = appData.iconClass && appData.iconClass.includes('game') ? '🎮' : '💻';
+            gamePartsTitle.textContent = `${icon} ${appData.name.toUpperCase()}`;
+            gamePartsSubtitle.textContent = `Download all ${appData.parts.length} parts to install`;
+
+            // Clear previous parts
+            gamePartsList.innerHTML = '';
+
+            // Add each part
+            appData.parts.forEach((part, index) => {
+                const partItem = document.createElement('div');
+                partItem.className = 'game-part-item';
+                partItem.innerHTML = `
+                    <div class="game-part-info">
+                        <div class="game-part-number">${part.partNumber}</div>
+                        <div class="game-part-details">
+                            <div class="game-part-title">Part ${part.partNumber}</div>
+                            <div class="game-part-size">${part.size}</div>
+                        </div>
+                    </div>
+                    <a href="${part.downloadUrl}" target="_blank" style="text-decoration: none;">
+                        <button class="game-part-download-btn">
+                            <span>⬇️</span>
+                            <span>Download</span>
+                        </button>
+                    </a>
+                `;
+                gamePartsList.appendChild(partItem);
+            });
+
+            // Show modal
+            gamePartsModal.classList.add('active');
+        }
+
+        // Close game parts modal
+        gamePartsClose.addEventListener('click', () => {
+            gamePartsModal.classList.remove('active');
+        });
+
+        // Close on outside click
+        gamePartsModal.addEventListener('click', (e) => {
+            if (e.target === gamePartsModal) {
+                gamePartsModal.classList.remove('active');
+            }
+        });
+
+        // ============================================
+        // END GAME PARTS MODAL FUNCTIONS
+        // ============================================
+
+        aiChatSend.addEventListener('click', sendMessage);
+        aiChatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') sendMessage();
+        });
+
+        // Quick action buttons
+        document.querySelectorAll('.ai-quick-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const action = btn.dataset.action;
+                let message = '';
+
+                if (action === 'recommend') message = 'Can you recommend some apps?';
+                if (action === 'popular') message = 'What are the most popular apps?';
+                if (action === 'help') message = 'I need help';
+
+                aiChatInput.value = message;
+                sendMessage();
+            });
+        });
+
+        // ============================================
+        // AI SMART SEARCH WITH SUGGESTIONS
+        // ============================================
+
+        const mainSearchInput = document.getElementById('mainSearchInput');
+        const aiSearchSuggestions = document.getElementById('aiSearchSuggestions');
+
+        const searchSuggestions = [
+            { icon: '🎬', text: 'Movie streaming apps', query: 'movie' },
+            { icon: '▶️', text: 'YouTube Premium mods', query: 'youtube' },
+            { icon: '📷', text: 'Instagram with extra features', query: 'instagram' },
+            { icon: '🎮', text: 'Gaming apps', query: 'game' },
+            { icon: '💰', text: 'Payment apps', query: 'pay' },
+            { icon: '🏪', text: 'App stores', query: 'store' },
+            { icon: '📱', text: 'Social media apps', query: 'social' },
+            { icon: '🎵', text: 'Music streaming', query: 'music' }
+        ];
+
+        // Make sure elements exist
+        if (!mainSearchInput || !aiSearchSuggestions) {
+            console.error('Search elements not found!');
+        }
+
+        mainSearchInput.addEventListener('focus', () => {
+            if (mainSearchInput.value.length === 0) {
+                showSearchSuggestions(searchSuggestions);
+            }
+        });
+
+        mainSearchInput.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase().trim();
+
+            // Perform live search as you type
+            if (query.length > 0) {
+                performSearch(query);
+
+                // Show matching suggestions
+                const filtered = searchSuggestions.filter(s =>
+                    s.text.toLowerCase().includes(query) || s.query.includes(query)
+                );
+
+                // Also add app name suggestions
+                const appSuggestions = [];
+                const allCards = document.querySelectorAll('.apk-card h3');
+                allCards.forEach(h3 => {
+                    const appName = h3.textContent.trim();
+                    if (appName && appName.toLowerCase().includes(query) && !appSuggestions.find(s => s.text === appName)) {
+                        appSuggestions.push({
+                            icon: '📱',
+                            text: appName,
+                            query: appName.toLowerCase()
+                        });
+                    }
+                });
+
+                // Combine and show suggestions (limit to 8 total)
+                const combinedSuggestions = [...filtered, ...appSuggestions].slice(0, 8);
+                showSearchSuggestions(combinedSuggestions);
+            } else {
+                // Show all apps when search is empty
+                document.querySelectorAll('.apk-card').forEach(card => {
+                    card.style.display = 'block';
+                });
+                showSearchSuggestions(searchSuggestions);
+            }
+        });
+
+        mainSearchInput.addEventListener('blur', () => {
+            setTimeout(() => {
+                aiSearchSuggestions.classList.remove('active');
+            }, 300);
+        });
+
+        function showSearchSuggestions(suggestions) {
+            if (!aiSearchSuggestions) return;
+
+            if (suggestions.length === 0) {
+                aiSearchSuggestions.innerHTML = '<div style="padding: 15px; text-align: center; color: #888; font-size: 14px;">No suggestions found</div>';
+                aiSearchSuggestions.classList.add('active');
+                aiSearchSuggestions.style.display = 'flex';
+                return;
+            }
+
+            aiSearchSuggestions.innerHTML = suggestions.map(s => `
+                <div class="ai-suggestion-item" data-query="${s.query}">
+                    <span class="ai-suggestion-icon">${s.icon}</span>
+                    <span class="ai-suggestion-text">${s.text}</span>
+                </div>
+            `).join('');
+
+            aiSearchSuggestions.classList.add('active');
+            aiSearchSuggestions.style.display = 'flex';
+
+            // Add click handlers
+            document.querySelectorAll('.ai-suggestion-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    const query = item.datasockquery;
+                    mainSearchInput.value = query;
+                    aiSearchSuggestions.classList.remove('active');
+                    performSearch(query);
+                });
+            });
+        }
+
+        function performSearch(query) {
+            // Filter and display matching apps
+            const allCards = document.querySelectorAll('.apk-card');
+            let matchCount = 0;
+
+            allCards.forEach(card => {
+                const h3 = card.querySelector('h3');
+                if (!h3) return;
+
+                const name = h3.textContent.toLowerCase();
+                if (name.includes(query.toLowerCase())) {
+                    card.style.display = 'block';
+                    card.style.animation = 'cardSlideIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)';
+                    matchCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Show message if no results
+            if (matchCount === 0 && query.length > 0) {
+                console.log('No apps found for:', query);
+            }
+        }
+
+        // ============================================
+        // AI RECOMMENDATIONS - Add badges to recommended apps
+        // ============================================
+
+        function addAIRecommendations() {
+            const recommendedApps = ['Movie Hub', 'YouTube Premium', 'Instagram Mod'];
+
+            setTimeout(() => {
+                document.querySelectorAll('.apk-card').forEach(card => {
+                    const appName = card.querySelector('h3').textContent;
+                    if (recommendedApps.includes(appName)) {
+                        if (!card.querySelector('.ai-recommended')) {
+                            const badge = document.createElement('div');
+                            badge.className = 'ai-recommended';
+                            badge.innerHTML = 'AI Pick';
+                            card.style.position = 'relative';
+                            card.appendChild(badge);
+                        }
+                    }
+                });
+            }, 100);
+        }
+
+        // ============================================
+        // END AI FEATURES
+        // ============================================
+
         // Tab Switching Functionality with Animations
         let isTabSwitching = false;
         let currentTabIndex = 0;
@@ -1854,6 +3314,24 @@
                 downloadUrl: 'https://www.mediafire.com/file/3xvc11vkk8blcnf/Human+Fall+Flat.rar/file'
             },
 
+            {
+                name: 'Resident Evil 2',
+                iconImg: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY8H2ZYzFvjuXwFAQqtoNmN2IxK8ppw4HpVQP-7HwQvKswRRccpmlwWLg&s',
+                iconClass: 'game-cod',
+                status: '🎮 Multi-Part Game',
+                downloads: 'Admin Only',
+                size: 'Under 20GB',
+                version: '1.5',
+                rating: '5.0⭐',
+                parts: [
+                    { partNumber: 1, size: '5.86GB', downloadUrl: 'https://drive.google.com/file/d/1KVfzKPTjMzckZhWe1jFj_W55_AzNJJa1/view?usp=drive_link' },
+                    { partNumber: 2, size: '5.86GB', downloadUrl: 'https://drive.google.com/file/d/1-u6I9x8mEDmrBxYW2ye6xFQIhsdyIzNn/view?usp=drive_link' },
+                    { partNumber: 3, size: '5.86GB', downloadUrl: 'https://drive.google.com/file/d/1Q7amm5pdAC9Ye50Rxr-G6nTj_5YiBHIH/view?usp=drive_link' },
+                    { partNumber: 4, size: '3.84GB', downloadUrl: 'https://drive.google.com/file/d/1XVCYvHvSZdh2F-bss9wiCT7tPPBFDo-i/view?usp=drive_link' },
+
+                ]
+            }
+
         ];
 
         // Movies Data
@@ -1871,6 +3349,136 @@
             },
             // Add more movies here following the same format
         ];
+
+        // ============================================
+        // GAME PARTS SYSTEM (Admin Mode Only)
+        // ============================================
+
+        // Game with multiple parts - Add as many parts as you want
+        const gamesWithParts = [
+            {
+                name: 'GTA 5 Mobile',
+                iconImg: 'https://cdn-icons-png.flaticon.com/512/2991/2991148.png',
+                iconClass: 'game-gta',
+                status: '🎮 Multi-Part Game',
+                downloads: 'Admin Only',
+                size: '5GB Total',
+                version: '1.0',
+                rating: '5.0⭐',
+                parts: [
+                    { partNumber: 1, size: '500MB', downloadUrl: 'https://www.mediafire.com/file/example/gta5-part1.rar' },
+                    { partNumber: 2, size: '500MB', downloadUrl: 'https://www.mediafire.com/file/example/gta5-part2.rar' },
+                    { partNumber: 3, size: '500MB', downloadUrl: 'https://www.mediafire.com/file/example/gta5-part3.rar' },
+                    { partNumber: 4, size: '500MB', downloadUrl: 'https://www.mediafire.com/file/example/gta5-part4.rar' },
+                    { partNumber: 5, size: '500MB', downloadUrl: 'https://www.mediafire.com/file/example/gta5-part5.rar' }
+                    // Add more parts here - it will automatically show them
+                ]
+            },
+            {
+                name: 'PUBG Mobile HD',
+                iconImg: 'https://cdn-icons-png.flaticon.com/512/2991/2991231.png',
+                iconClass: 'game-pubg',
+                status: '🎮 Multi-Part Game',
+                downloads: 'Admin Only',
+                size: '3GB Total',
+                version: '2.0',
+                rating: '5.0⭐',
+                parts: [
+                    { partNumber: 1, size: '1GB', downloadUrl: 'https://www.mediafire.com/file/example/pubg-part1.rar' },
+                    { partNumber: 2, size: '1GB', downloadUrl: 'https://www.mediafire.com/file/example/pubg-part2.rar' },
+                    { partNumber: 3, size: '1GB', downloadUrl: 'https://www.mediafire.com/file/example/pubg-part3.rar' }
+                ]
+            },
+            {
+                name: 'Resident Evil 2',
+                iconImg: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY8H2ZYzFvjuXwFAQqtoNmN2IxK8ppw4HpVQP-7HwQvKswRRccpmlwWLg&s',
+                iconClass: 'game-cod',
+                status: '🎮 Multi-Part Game',
+                downloads: 'Admin Only',
+                size: '4GB Total',
+                version: '1.5',
+                rating: '5.0⭐',
+                parts: [
+                    { partNumber: 1, size: '5.86GB', downloadUrl: 'https://drive.google.com/file/d/1KVfzKPTjMzckZhWe1jFj_W55_AzNJJa1/view?usp=drive_link' },
+                    { partNumber: 2, size: '5.86GB', downloadUrl: 'https://drive.google.com/file/d/1-u6I9x8mEDmrBxYW2ye6xFQIhsdyIzNn/view?usp=drive_link' },
+                    { partNumber: 3, size: '5.86GB', downloadUrl: 'https://drive.google.com/file/d/1Q7amm5pdAC9Ye50Rxr-G6nTj_5YiBHIH/view?usp=drive_link' },
+                    { partNumber: 4, size: '3.84GB', downloadUrl: 'https://drive.google.com/file/d/1XVCYvHvSZdh2F-bss9wiCT7tPPBFDo-i/view?usp=drive_link' },
+
+                ]
+            }
+            // Add more games with parts here
+        ];
+
+        // Hidden Apps Data (Secret - Only accessible with password)
+        const hiddenAppsData = [
+            {
+                name: 'Secret Admin Panel',
+                iconImg: 'https://cdn-icons-png.flaticon.com/512/2092/2092663.png',
+                iconClass: 'admin-panel',
+                status: '🔒 Admin Only',
+                downloads: 'Hidden',
+                size: '5MB',
+                version: '1.0',
+                rating: '5.0⭐',
+                downloadUrl: 'https://www.mediafire.com/file/example/admin.apk/file'
+            },
+            {
+                name: 'VIP Premium Tools',
+                iconImg: 'https://cdn-icons-png.flaticon.com/512/3064/3064197.png',
+                iconClass: 'vip-tools',
+                status: '🔒 VIP Only',
+                downloads: 'Hidden',
+                size: '12MB',
+                version: '2.0',
+                rating: '5.0⭐',
+                downloadUrl: 'https://www.mediafire.com/file/example/vip.apk/file'
+            },
+            {
+                name: 'Developer Edition',
+                iconImg: 'https://cdn-icons-png.flaticon.com/512/2920/2920277.png',
+                iconClass: 'dev-edition',
+                status: '🔒 Dev Only',
+                downloads: 'Hidden',
+                size: '20MB',
+                version: '3.0',
+                rating: '5.0⭐',
+                downloadUrl: 'https://www.mediafire.com/file/example/dev.apk/file'
+            }
+        ];
+
+        // Hidden PC Software Data
+        const hiddenPCData = [
+            {
+                name: 'Secret PC Tool',
+                iconImg: 'https://cdn-icons-png.flaticon.com/512/2920/2920349.png',
+                iconClass: 'secret-pc',
+                status: '🔒 Admin Only',
+                downloads: 'Hidden',
+                size: '50MB',
+                version: '1.0',
+                rating: '5.0⭐',
+                downloadUrl: 'https://www.mediafire.com/file/example/pc-tool.exe/file'
+            }
+        ];
+
+        // Hidden Movies Data
+        const hiddenMoviesData = [
+            {
+                name: 'Exclusive Content',
+                iconImg: 'https://cdn-icons-png.flaticon.com/512/3074/3074767.png',
+                iconClass: 'exclusive',
+                status: '🔒 VIP Only',
+                downloads: 'Hidden',
+                size: '2GB',
+                version: '1.0',
+                rating: '5.0⭐',
+                downloadUrl: 'https://www.mediafire.com/file/example/movie.mp4/file'
+            }
+        ];
+
+        // Secret password for hidden content
+        const HIDDEN_PASSWORD = 'zainwarrior2025';
+        let hiddenModeActive = false;
 
         // App data with download links and images
         const appsData = [
@@ -1980,6 +3588,8 @@
             });
             // Attach image click handlers after rendering
             setTimeout(() => addImageClickHandlers(), 100);
+            // Add AI recommendations
+            addAIRecommendations();
         }
 
         renderApps();
@@ -1996,7 +3606,14 @@
         apksGrid.addEventListener('click', (e) => {
             if (e.target.classList.contains('view-btn')) {
                 const index = e.target.dataset.index;
-                currentAppData = appsData[index];
+
+                // Check if it's a hidden app
+                if (e.target.dataset.hidden === 'true') {
+                    currentAppData = hiddenAppsData[index];
+                } else {
+                    currentAppData = appsData[index];
+                }
+
                 showDetailsModal(currentAppData);
             }
         });
@@ -2189,16 +3806,25 @@
         // Final download
         unlockDownloadBtn.addEventListener('click', () => {
             if (!unlockDownloadBtn.disabled && currentAppData) {
-                // Open download link
-                if (currentAppData.downloadUrl && currentAppData.downloadUrl !== '#') {
-                    window.open(currentAppData.downloadUrl, '_blank');
+                // Check if app has parts (multi-part download)
+                if (currentAppData.parts && currentAppData.parts.length > 0) {
+                    // Close unlock modal
+                    unlockModal.style.display = 'none';
 
-                    // Show success message
-                    setTimeout(() => {
-                        alert(`${currentAppData.name} download started! Check your downloads folder.`);
-                    }, 500);
+                    // Show parts modal
+                    showGamePartsFromApp(currentAppData);
                 } else {
-                    alert(`Download link not available for ${currentAppData.name}`);
+                    // Single download - open link directly
+                    if (currentAppData.downloadUrl && currentAppData.downloadUrl !== '#') {
+                        window.open(currentAppData.downloadUrl, '_blank');
+
+                        // Show success message
+                        setTimeout(() => {
+                            alert(`${currentAppData.name} download started! Check your downloads folder.`);
+                        }, 500);
+                    } else {
+                        alert(`Download link not available for ${currentAppData.name}`);
+                    }
                 }
 
                 // Close modal
@@ -2272,8 +3898,8 @@
         }
 
         // Show PC Software Details
-        function showPCDetails(index) {
-            const software = pcSoftwareData[index];
+        function showPCDetails(index, isHidden = false) {
+            const software = isHidden ? hiddenPCData[index] : pcSoftwareData[index];
             currentAppData = software;
 
             // Update modal with software details
@@ -2324,8 +3950,8 @@
         }
 
         // Show Movie Details
-        function showMovieDetails(index) {
-            const movie = moviesData[index];
+        function showMovieDetails(index, isHidden = false) {
+            const movie = isHidden ? hiddenMoviesData[index] : moviesData[index];
             currentAppData = movie;
 
             // Update modal with movie details
