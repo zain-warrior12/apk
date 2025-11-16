@@ -1761,5 +1761,6 @@ Type /help to see available commands.`, false);
             btn.addEventListener('click', () => {
                 setTimeout(addImageClickHandlers, 300);
             });
-        });</script>
+        });
+
 
