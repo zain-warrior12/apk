@@ -1279,6 +1279,18 @@ const appsData = [
         downloadUrl: 'https://www.mediafire.com/file/ylvsii07igzs71q/Angry-Dadi-Game-v1.0.apk/file'
     },
 
+    
+    {
+        name: 'Amazon Mini TV',
+        iconImg: 'https://apks.urmaxx.in/file/692f5c3045a5e59efb533966',
+        iconClass: 'Game',
+        status: 'Free',
+        downloads: '10K+',
+        size: '35MB',
+        version: '4.5',
+        rating: '4.8⭐',
+        downloadUrl: 'https://www.mediafire.com/file/gx7sdu3d1wwxrvr/Amazon_miniTV.apk/file'
+    },
 
 
 
@@ -1762,3 +1774,4 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
         setTimeout(addImageClickHandlers, 300);
     });
 });
+
